@@ -12,11 +12,11 @@ const ProductTypes: NextPage = () => {
   const handleCreateNewProductStock = async (event: FormEvent) => {
     event.preventDefault();
 
-    // fetch("http://127.0.0.1:8000/api/product-types", {
-    //   method: "POST",
-    //   body: JSON.stringify({ name: name, tax_value: taxValue }),
-    //   headers: { "Content-type": "application/json; charset=UTF-8" },
-    // }).then((response) => response.json());
+    fetch("http://127.0.0.1:8000/api/product-types", {
+      method: "POST",
+      body: JSON.stringify({ name: name, tax_value: taxValue }),
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    }).then((response) => response.json());
 
     window.location.reload();
   };
